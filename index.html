@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Batik Naela - Temukan Keindahan Batik Indonesia</title>
+  <meta name="description" content="Koleksi batik modern dan tradisional berkualitas premium dengan harga terjangkau">
+
+  <!-- Fonts - UPDATED untuk aesthetic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div class="loader">
+    <div class="spinner"></div>
+    <p>Memuat Batik Naela...</p>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast">✓ Produk ditambahkan!</div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#" class="navbar-logo">Batik <span>Naela</span></a>
+
+    <div class="navbar-nav" id="navbar-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Collection</a>
+      <a href="#products">Produk</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="navbar-extra">
+      <a href="#" id="search-button" aria-label="Buka pencarian">
+        <i data-feather="search"></i>
+      </a>
+      <a href="#" id="shopping-cart-button" aria-label="Buka keranjang">
+        <i data-feather="shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+      <a href="#" id="hamburger-menu" class="menu-toggle" aria-label="Buka menu">
+        <i data-feather="menu"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- PANEL CART & SEARCH -->
+  <div class="shopping-cart" id="cart-panel" aria-hidden="true"></div>
+
+  <form class="search-form" id="search-form" role="search" aria-hidden="true">
+    <input type="search" id="search-box" placeholder="Cari produk/koleksi..." />
+    <label for="search-box"><i data-feather="search"></i></label>
+  </form>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="mask-container">
+      <main class="content">
+        <h1>Temukan Keindahan <br><span>Batik Indonesia</span></h1>
+        <p>Setiap helai kain membawa kisah dan makna budaya yang abadi</p>
+        <a href="#products" class="cta">Belanja Sekarang</a>
+      </main>
+    </div>
+  </section>
+
+  <!-- ABOUT - ENHANCED -->
+  <section class="about" id="about">
+    <div class="about-container">
+      <div class="about-content">
+        <h2><span>Tentang</span> Kami</h2>
+        <div class="underline"></div>
+        <p class="lead">Kami adalah rumah batik yang lahir dari kecintaan mendalam terhadap warisan budaya Indonesia.</p>
+        <p>Batik Naela berdiri sejak 2015 dengan misi melestarikan seni batik tradisional sambil menghadirkan desain modern yang sesuai dengan gaya hidup masa kini.</p>
+        
+        <div class="about-features">
+          <div class="feature-item">
+            <i data-feather="check-circle"></i>
+            <h3>Kualitas Premium</h3>
+            <p>Bahan pilihan dan pewarna alami berkualitas tinggi</p>
+          </div>
+          <div class="feature-item">
+            <i data-feather="award"></i>
+            <h3>Karya Pengrajin</h3>
+            <p>Dibuat langsung oleh pengrajin batik berpengalaman</p>
+          </div>
+          <div class="feature-item">
+            <i data-feather="heart"></i>
+            <h3>Desain Eksklusif</h3>
+            <p>Motif unik hasil kolaborasi desainer modern</p>
+          </div>
+        </div>
+
+        <blockquote>
+          <i data-feather="quote" class="quote-icon"></i>
+          "Mengenakan batik bukan sekadar bergaya — tetapi menghormati sejarah dan melestarikan budaya bangsa"
+        </blockquote>
+        
+        <a href="#menu" class="cta">Jelajahi Koleksi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KOLEKSI -->
+  <section id="menu" class="menu">
+    <h2><span>Koleksi</span> Batik</h2>
+    <p>Pilihan terbaik untuk gaya kasual hingga formal</p>
+
+    <div class="row row-top">
+      <div class="menu-card fade-in">
+        <img src="img/motif/batiktulis.png" alt="Kain Batik Tulis" />
+        <h3 class="menu-card-title">Kain Batik Tulis</h3>
+        <p class="menu-card-price">650K</p>
+        <div class="menu-qty">
+          <label>Qty:</label>
+          <select class="qty"><option>1</option><option>2</option><option>3</option></select>
+        </div>
+        <button class="menu-add add-to-cart">
+          <i data-feather="shopping-cart"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+
+      <div class="menu-card fade-in">
+        <img src="img/motif/kemejapria.png" alt="Kemeja Batik Sekar Jagad" />
+        <h3 class="menu-card-title">Kemeja Batik Sekar Jagad</h3>
+        <p class="menu-card-price">320K</p>
+        <div class="menu-qty">
+          <label>Qty:</label>
+          <select class="qty"><option>1</option><option>2</option><option>3</option></select>
+        </div>
+        <button class="menu-add add-to-cart">
+          <i data-feather="shopping-cart"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+
+      <div class="menu-card fade-in">
+        <img src="img/motif/gaunbatikmodern.png" alt="Gaun Batik Modern" />
+        <h3 class="menu-card-title">Gaun Batik Modern</h3>
+        <p class="menu-card-price">480K</p>
+        <div class="menu-qty">
+          <label>Qty:</label>
+          <select class="qty"><option>1</option><option>2</option><option>3</option></select>
+        </div>
+        <button class="menu-add add-to-cart">
+          <i data-feather="shopping-cart"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="row row-bottom">
+      <div class="menu-card fade-in">
+        <img src="img/motif/kebaya&rok batik.png" alt="Kebaya & Rok Batik" />
+        <h3 class="menu-card-title">Kebaya & Rok Batik</h3>
+        <p class="menu-card-price">720K</p>
+        <div class="menu-qty">
+          <label>Qty:</label>
+          <select class="qty"><option>1</option><option>2</option><option>3</option></select>
+        </div>
+        <button class="menu-add add-to-cart">
+          <i data-feather="shopping-cart"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+
+      <div class="menu-card fade-in">
+        <img src="img/motif/scarf batik.png" alt="Scarf Batik" />
+        <h3 class="menu-card-title">Scarf Batik</h3>
+        <p class="menu-card-price">150K</p>
+        <div class="menu-qty">
+          <label>Qty:</label>
+          <select class="qty"><option>1</option><option>2</option><option>3</option></select>
+        </div>
+        <button class="menu-add add-to-cart">
+          <i data-feather="shopping-cart"></i>
+          <span>Add to Cart</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUK UNGGULAN -->
+  <section class="products" id="products">
+    <h2><span>Produk</span> Unggulan</h2>
+    <p>Pilihan best-seller Batik Naela — siap kirim</p>
+
+    <div class="row">
+      <!-- Produk 1 -->
+      <div class="product-card fade-in">
+        <div class="product-icons">
+          <a href="#" class="add-to-cart" aria-label="Tambah ke keranjang">
+            <i data-feather="shopping-cart"></i>
+          </a>
+          <a href="#" class="item-detail-button" aria-label="Lihat detail">
+            <i data-feather="eye"></i>
+          </a>
+        </div>
+        <div class="product-image">
+          <img src="img/motif/setelan wanita.png" alt="Setelan Batik Wanita" />
+        </div>
+        <div class="product-content">
+          <h3>Setelan Batik Wanita</h3>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+          </div>
+          <div class="product-qty">
+            <label>Qty:</label>
+            <select class="qty">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+          <div class="product-price">560K <span>620K</span></div>
+        </div>
+      </div>
+
+      <!-- Produk 2 -->
+      <div class="product-card fade-in">
+        <div class="product-icons">
+          <a href="#" class="add-to-cart" aria-label="Tambah ke keranjang">
+            <i data-feather="shopping-cart"></i>
+          </a>
+          <a href="#" class="item-detail-button" aria-label="Lihat detail">
+            <i data-feather="eye"></i>
+          </a>
+        </div>
+        <div class="product-image">
+          <img src="img/motif/batik slimfit.png" alt="Kemeja Batik Slimfit" />
+        </div>
+        <div class="product-content">
+          <h3>Kemeja Batik Slimfit</h3>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+          </div>
+          <div class="product-qty">
+            <label>Qty:</label>
+            <select class="qty">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+          <div class="product-price">340K <span>395K</span></div>
+        </div>
+      </div>
+
+      <!-- Produk 3 -->
+      <div class="product-card fade-in">
+        <div class="product-icons">
+          <a href="#" class="add-to-cart" aria-label="Tambah ke keranjang">
+            <i data-feather="shopping-cart"></i>
+          </a>
+          <a href="#" class="item-detail-button" aria-label="Lihat detail">
+            <i data-feather="eye"></i>
+          </a>
+        </div>
+        <div class="product-image">
+          <img src="img/motif/outer batik.png" alt="Outer Batik Katun" />
+        </div>
+        <div class="product-content">
+          <h3>Outer Batik Katun</h3>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+          </div>
+          <div class="product-qty">
+            <label>Qty:</label>
+            <select class="qty">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+          <div class="product-price">280K <span>320K</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact fade-in" id="contact">
+    <h2>Hubungi Kami</h2>
+    <p>Temukan koleksi batik terbaik atau konsultasikan motif pilihanmu</p>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i data-feather="map-pin"></i>
+          <div>
+            <h4>Alamat</h4>
+            <p>Jl. Sultan Hasanudin, Gg 25, No 18, Keturen</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i data-feather="phone"></i>
+          <div>
+            <h4>Telepon</h4>
+            <p>+62 878-4517-8824</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i data-feather="mail"></i>
+          <div>
+            <h4>Email</h4>
+            <p>support@batiknaela.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i data-feather="clock"></i>
+          <div>
+            <h4>Jam Operasional</h4>
+            <p>Senin - Sabtu: 09.00 - 21.00 WIB</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.0!2d110.36!3d-7.78!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDYnNDguMCJTIDExMMKwMjEnMzYuMCJF!5e0!3m2!1sen!2sid!4v1234567890" 
+          loading="lazy"
+          title="Lokasi Batik Naela">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER - ENHANCED -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Batik <span>Naela</span></h3>
+        <p>Melestarikan warisan budaya Indonesia melalui batik berkualitas premium dengan desain modern yang timeless.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i data-feather="facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i data-feather="twitter"></i></a>
+          <a href="#" aria-label="Youtube"><i data-feather="youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#menu">Koleksi</a></li>
+          <li><a href="#products">Produk</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Informasi</h4>
+        <ul>
+          <li><a href="#">Cara Pemesanan</a></li>
+          <li><a href="#">Metode Pembayaran</a></li>
+          <li><a href="#">Kebijakan Privasi</a></li>
+          <li><a href="#">Syarat & Ketentuan</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>Dapatkan update koleksi terbaru dan penawaran spesial</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Email Anda" required>
+          <button type="submit"><i data-feather="send"></i></button>
+        </form>
+        <div class="footer-payment">
+          <p>Metode Pembayaran:</p>
+          <div class="payment-icons">
+            <span>💳</span>
+            <span>🏦</span>
+            <span>📱</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Batik Naela. All Rights Reserved. | Dibuat dengan ❤️ oleh <a href="#">Naelaayu</a></p>
+    </div>
+  </footer>
+
+  <!-- MODAL DETAIL PRODUK -->
+  <div class="modal-detail" id="modal-detail-produk">
+    <div class="modal-detail-overlay"></div>
+    <div class="modal-detail-container">
+      <button class="modal-detail-close" aria-label="Tutup">
+        <i data-feather="x"></i>
+      </button>
+      
+      <div class="modal-detail-content">
+        <div class="modal-detail-image">
+          <img id="modal-img" src="" alt="Detail Produk" />
+        </div>
+        
+        <div class="modal-detail-info">
+          <h2 id="modal-title">Nama Produk</h2>
+          
+          <div class="modal-detail-stars" id="modal-stars"></div>
+          
+          <div class="modal-detail-price" id="modal-price">
+            <span class="price-current">0K</span>
+            <span class="price-old">0K</span>
+          </div>
+          
+          <div class="modal-detail-description">
+            <h3>Deskripsi Produk</h3>
+            <p>Batik berkualitas tinggi dengan motif tradisional yang elegan. Cocok untuk acara formal maupun kasual. Bahan nyaman dan breathable.</p>
+          </div>
+          
+          <div class="modal-detail-specs">
+            <h3>Spesifikasi</h3>
+            <ul>
+              <li>✓ Bahan: Katun Premium</li>
+              <li>✓ Motif: Batik Tulis/Cap</li>
+              <li>✓ Perawatan: Cuci dengan tangan</li>
+              <li>✓ Tersedia berbagai ukuran</li>
+            </ul>
+          </div>
+          
+          <div class="modal-detail-qty">
+            <label>Jumlah:</label>
+            <select id="modal-qty" class="modal-qty-select">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          
+          <button class="modal-detail-add-cart" id="modal-add-to-cart">
+            <i data-feather="shopping-cart"></i>
+            <span>Tambah ke Keranjang</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CHECKOUT (FITUR BARU) -->
+  <div class="modal-checkout" id="modal-checkout">
+    <div class="modal-checkout-overlay"></div>
+    <div class="modal-checkout-container">
+      <button class="modal-checkout-close" aria-label="Tutup">
+        <i data-feather="x"></i>
+      </button>
+      
+      <h2>Checkout</h2>
+      
+      <form id="checkout-form">
+        <div class="checkout-section">
+          <h3>Informasi Pembeli</h3>
+          
+          <div class="form-group">
+            <label>Nama Lengkap *</label>
+            <input type="text" id="customer-name" required placeholder="Masukkan nama lengkap">
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label>No. WhatsApp *</label>
+              <input type="tel" id="customer-phone" required placeholder="08xxxxxxxxxx">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="customer-email" placeholder="email@example.com">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Alamat Lengkap *</label>
+            <textarea id="customer-address" required rows="3" placeholder="Jalan, RT/RW, Kelurahan, Kecamatan, Kota"></textarea>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label>Kota *</label>
+              <input type="text" id="customer-city" required placeholder="Nama kota">
+            </div>
+            <div class="form-group">
+              <label>Kode Pos</label>
+              <input type="text" id="customer-postal" placeholder="12345">
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-section">
+          <h3>Ringkasan Pesanan</h3>
+          <div id="checkout-items"></div>
+          <div class="checkout-total">
+            <span>Total:</span>
+            <span id="checkout-total-price">0</span>
+          </div>
+        </div>
+
+        <div class="checkout-section">
+          <h3>Metode Pemesanan</h3>
+          <div class="payment-methods">
+            <label class="payment-option">
+              <input type="radio" name="payment" value="whatsapp" checked>
+              <div class="payment-card">
+                <i data-feather="message-circle"></i>
+                <span>WhatsApp</span>
+              </div>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="transfer">
+              <div class="payment-card">
+                <i data-feather="credit-card"></i>
+                <span>Transfer Bank</span>
+              </div>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="cod">
+              <div class="payment-card">
+                <i data-feather="package"></i>
+                <span>COD</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Catatan Pesanan (Opsional)</label>
+          <textarea id="customer-notes" rows="2" placeholder="Ukuran, warna, atau permintaan khusus"></textarea>
+        </div>
+
+        <button type="submit" class="btn-checkout-submit">
+          <i data-feather="check-circle"></i>
+          <span>Proses Pesanan</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" aria-label="Kembali ke atas">
+    <i data-feather="arrow-up"></i>
+  </button>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/087845178824?text=Halo%2C%20saya%20tertarik%20dengan%20produk%20Batik%20Naela" 
+     class="whatsapp-float" 
+     target="_blank" 
+     aria-label="Chat WhatsApp">
+    <i data-feather="message-circle"></i>
+  </a>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/script.js"></script>
+  <script>feather.replace();</script>
+
+</body>
+</html>
